@@ -1,0 +1,124 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <appSettings>
+    <add key="Prefix" value="https://intraweb.tblbd.com/CDNService/"/>
+    <add key="NoImageFile" value="d:\WWW\NoFace.jpg"/>
+    <add key="NoSign" value="d:\WWW\NoSign.jpg"/>
+    <add key="AppTitle" value="intraweb"/>
+    <add key="ApplicationID" value="-1"/>
+    <add key="Version" value="1.0.0"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="TblUserDBConnectionString0" connectionString="Data Source=172.20.1.70;Initial Catalog=TblUserDB;User ID=sa;Password=fsbank" providerName="System.Data.SqlClient"/>
+    <add name="FloraConnectionString0" connectionString="Data Source=172.20.1.13;Initial Catalog=Florabank_Online;User ID=ituser;Password=ituser" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <!--
+    For a description of web.config changes see http://go.microsoft.com/fwlink/?LinkId=235367.
+
+    The following attributes can be set on the <httpRuntime> tag.
+      <system.Web>
+        <httpRuntime targetFramework="4.5.1" />
+      </system.Web>
+  -->
+  <system.web>
+    <httpRuntime maxRequestLength="2000000" enable="true" executionTimeout="120000"/>
+    <compilation debug="true" targetFramework="4.5.1">
+      <assemblies>
+        <add assembly="System.Web.DynamicData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Data.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Web.Extensions.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+    </compilation>
+    <authentication mode="Forms"/>
+    <customErrors mode="Off">
+      <error statusCode="403" redirect="NoAccess.htm"/>
+      <error statusCode="404" redirect="FileNotFound.htm"/>
+    </customErrors>
+    <pages controlRenderingCompatibilityVersion="4.0">
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="asp" namespace="System.Web.UI.WebControls" assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add tagPrefix="CKEditor" assembly="CKEditor.NET" namespace="CKEditor.NET"/>
+        <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit"/>
+      </controls>
+    </pages>
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="*" path="*_AppService.axd" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" validate="false"/>
+    </httpHandlers>
+    <httpModules>
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </httpModules>
+    <sessionState cookieless="UseCookies" mode="SQLServer" sqlCommandTimeout="600" sqlConnectionString="Data Source=172.20.1.70;Integrated Security=False;User ID=ituser;pwd=Fsbank069" timeout="3600"/>
+    <machineKey validationKey="8B9F68D0CC730F6F046D0173021C34B1A0D9A01C21D8E4D4A7A1DFF38332DEE8CBBAFEA503C18776614EE9D4F7EEA7E5D2D5571630547D822485A27B1EF53AC1" decryptionKey="60009563EFCFC594FD1BC46684943AA398EE70412A624B2EB488BBB071F15ECF" validation="SHA1" decryption="AES"/>
+  </system.web>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" warningLevel="4" type="Microsoft.CSharp.CSharpCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+        <providerOption name="WarnAsError" value="false"/>
+      </compiler>
+    </compilers>
+  </system.codedom>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <modules>
+      <remove name="ScriptModule"/>
+      <add name="ScriptModule" preCondition="managedHandler" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </modules>
+    <handlers>
+      <remove name="WebServiceHandlerFactory-Integrated"/>
+      <remove name="ScriptHandlerFactory"/>
+      <remove name="ScriptHandlerFactoryAppServices"/>
+      <remove name="ScriptResource"/>
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ScriptHandlerFactoryAppServices" verb="*" path="*_AppService.axd" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      <add name="ScriptResource" preCondition="integratedMode" verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+    </handlers>
+    <defaultDocument>
+      <files>
+        <clear/>
+        <add value="Default.htm"/>
+        <add value="Default.asp"/>
+        <add value="index.htm"/>
+        <add value="index.html"/>
+        <add value="iisstart.htm"/>
+        <add value="default.aspx"/>
+        <add value="index.php"/>
+        <add value="app_offline.htm"/>
+      </files>
+    </defaultDocument>
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Extensions.Design" publicKeyToken="31bf3856ad364e35"/>
+        <bindingRedirect oldVersion="1.0.0.0-1.1.0.0" newVersion="3.5.0.0"/>
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <system.net>
+    <mailSettings>
+      <smtp from="noreply@trustbanklimited.com">
+        <network defaultCredentials="false" host="172.22.1.118" password="itadmin;123" userName="noreply"/>
+      </smtp>
+    </mailSettings>
+  </system.net>
+</configuration>

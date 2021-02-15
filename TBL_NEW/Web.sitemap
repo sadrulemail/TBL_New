@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="." description="" roles="*" >
+    
+    <siteMapNode url="Notice.aspx" title="Notice Board" description="" roles="ADMIN,EDITOR" />
+    <siteMapNode url="Attachment_Add.aspx" title="Attachments" description="" roles="ADMIN,PAYSLIP" />
+    <siteMapNode url="NewPics.aspx" title="New Pics" description="" roles="ADMIN" />
+	<siteMapNode url="Status.aspx" title="Emp Status" description="" roles="ADMIN" />
+    <siteMapNode url="Profile.aspx" title="View Profile" description="" roles="*" />
+    <siteMapNode url="LoginLog.aspx" title="Login Log" description="" roles="*" />
+    <siteMapNode url="PasswordChange.aspx" title="Password Change" description="" roles="*" />
+    <siteMapNode url="Logout.aspx" title="Log Out" description="" roles="*" />
+  </siteMapNode>
+</siteMap>

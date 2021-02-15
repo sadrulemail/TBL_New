@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TBL", "..\..\WebSites\TBL", "{BE6006C5-1875-4DAE-BD18-FBE5663C110C}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = ""$/Web Applications/TBL", PDCAAAAA"
+		SccAuxPath = ""
+		SccLocalPath = "."
+		SccProvider = "MSSCCI:Microsoft Visual SourceSafe"
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/TBL"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\TBL\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\TBL\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/TBL"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\TBL\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\TBL\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2931"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = ..\\..\\WebSites\\TBL
+		SccLocalPath1 = D:\\My\u0020Documents\\Visual\u0020Studio\u00202008\\WebSites\\TBL
+		SccProjectEnlistmentChoice1 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE6006C5-1875-4DAE-BD18-FBE5663C110C}.Debug|.NET.ActiveCfg = Debug|.NET
+		{BE6006C5-1875-4DAE-BD18-FBE5663C110C}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
